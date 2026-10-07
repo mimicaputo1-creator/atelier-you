@@ -1,0 +1,236 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* PALETA 60/30/10
+   60% crema:        #F7F0EA (fondos)
+   30% rosa durazno: #F1C1B1 (header, bloques, botones)
+   10% bordó:        #3A1D22 (textos y detalles) */
+
+/* ESTILO DE FUENTE */
+body{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1rem;
+    background-color: #F7F0EA;
+    color: #3A1D22;
+}
+
+h1, h2{
+    font-family: "Ephesis", cursive;
+    font-weight: 400;
+}
+
+h1{ font-size: 3rem; }
+h2{ font-size: 3.5rem; }
+
+h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+a{
+    color: #3A1D22;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+    background-color: #E6D3C8; /* se ve mientras no haya foto */
+}
+
+/* CONTENEDOR: centra el contenido */
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section{
+    padding: 64px 0;
+}
+
+/* BOTONES */
+button{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border: 2px solid #3A1D22;
+    border-radius: 999px;
+    background-color: #3A1D22;
+    color: #F7F0EA;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #F1C1B1;
+    color: #3A1D22;
+}
+
+/* HEADER */
+header{
+    background-color: #F1C1B1;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    gap: 32px;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+/* PRESENTACION */
+.inicio .contenedor{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.inicio-texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.inicio-texto h2{
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.inicio-texto p{
+    font-size: 1.25rem;
+}
+
+.inicio img{
+    flex: 1;
+    height: 420px;
+    object-fit: cover;
+    object-position: top; /* que no se corte la cara */
+    border-radius: 16px;
+}
+
+/* BUSCADOR */
+.buscador{
+    background-color: #F1C1B1;
+    text-align: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.botones button{
+    background-color: #F7F0EA;
+    color: #3A1D22;
+}
+
+.botones button:hover{
+    background-color: #3A1D22;
+    color: #F7F0EA;
+}
+
+/* TITULOS DE SECCION */
+.titulo-seccion{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.resenas h2{
+    margin-bottom: 24px;
+}
+
+/* TARJETAS (eventos y reseñas) */
+.tarjetas{
+    display: flex;
+    gap: 24px;
+}
+
+.tarjetas article{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.eventos img{
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.etiqueta{
+    align-self: flex-start;
+    background-color: #F1C1B1;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.resenas article{
+    background-color: #FBF7F3;
+    border: 1px solid #E6D3C8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.estrellas{
+    color: #9C4A3C;
+}
+
+/* CLUB */
+.club{
+    background-color: #3A1D22;
+    color: #F7F0EA;
+    text-align: center;
+}
+
+.club .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.club p{
+    max-width: 560px;
+}
+
+.club button{
+    background-color: #F1C1B1;
+    color: #3A1D22;
+    border-color: #F1C1B1;
+}
+
+/* FOOTER */
+footer{
+    background-color: #F1C1B1;
+    padding: 40px 0;
+}
+
+footer .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav, .redes{
+    display: flex;
+    gap: 24px;
+}
