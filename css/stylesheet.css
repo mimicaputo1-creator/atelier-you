@@ -48,8 +48,9 @@ section{
     padding: 64px 0;
 }
 
-/* BOTONES */
-button{
+/* BOTONES (button y links con forma de boton) */
+button, .boton{
+    display: inline-block;
     font-family: inherit;
     font-size: 1rem;
     padding: 12px 28px;
@@ -60,8 +61,21 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover, .boton:hover{
     background-color: #F1C1B1;
+    color: #3A1D22;
+}
+
+/* boton rosa (para fondos oscuros) */
+.boton-rosa{
+    background-color: #F1C1B1;
+    color: #3A1D22;
+    border: 2px solid #F1C1B1;
+}
+
+/* boton claro (con borde) */
+.boton-claro{
+    background-color: transparent;
     color: #3A1D22;
 }
 
@@ -85,6 +99,12 @@ header nav{
 }
 
 header nav a:hover{
+    text-decoration: underline;
+}
+
+/* pagina en la que estoy */
+nav a.activo{
+    font-weight: 600;
     text-decoration: underline;
 }
 
@@ -116,7 +136,6 @@ header nav a:hover{
     flex: 1;
     height: 420px;
     object-fit: cover;
-    object-position: top; /* que no se corte la cara */
     border-radius: 16px;
 }
 
@@ -212,10 +231,8 @@ header nav a:hover{
     max-width: 560px;
 }
 
-.club button{
-    background-color: #F1C1B1;
-    color: #3A1D22;
-    border-color: #F1C1B1;
+.club .boton-rosa:hover{
+    background-color: #F7F0EA;
 }
 
 /* FOOTER */
@@ -233,4 +250,405 @@ footer .contenedor{
 footer nav, .redes{
     display: flex;
     gap: 24px;
+}
+
+
+/* ===== PAGINAS INTERNAS ===== */
+
+/* TITULO DE CADA PAGINA */
+.titulo-pagina{
+    padding: 48px 0 24px;
+}
+
+.titulo-pagina h2{
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.titulo-pagina p{
+    font-size: 1.25rem;
+}
+
+/* el buscador en Descubrir es mas finito */
+.agenda{
+    padding-top: 48px;
+}
+
+.titulo-agenda{
+    margin-bottom: 24px;
+}
+
+/* DESCUBRIR: grilla de eventos con GRID */
+.grilla-eventos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.ficha{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ficha img{
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.ficha .precio{
+    font-weight: 600;
+}
+
+.ficha button{
+    margin-top: 8px;
+}
+
+.ficha-sumar{
+    justify-content: center;
+    background-color: #F1C1B1;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+/* LISTAS: menu al costado y contenido, con GRID TEMPLATE AREAS */
+.listas{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-areas: "menu contenido";
+    gap: 48px;
+}
+
+.menu-listas{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: start;
+    background-color: #FBF7F3;
+    border: 1px solid #E6D3C8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.menu-listas a{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.menu-listas a.activo{
+    background-color: #F1C1B1;
+    font-weight: 600;
+}
+
+.contenido-lista{
+    grid-area: contenido;
+}
+
+.grilla-guardados{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* CLUB: beneficios con GRID */
+.beneficios h2{
+    margin-bottom: 24px;
+}
+
+.grilla-beneficios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.grilla-beneficios article{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #FBF7F3;
+    border: 1px solid #E6D3C8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* FORMULARIOS (club y contacto) */
+.formulario-seccion{
+    background-color: #F1C1B1;
+}
+
+.formulario-seccion h2{
+    margin-bottom: 24px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 560px;
+}
+
+.formulario label{
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.formulario input, .formulario select, .formulario textarea{
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border: 1px solid #E6D3C8;
+    border-radius: 8px;
+    background-color: #FBF7F3;
+    color: #3A1D22;
+}
+
+.formulario button{
+    margin-top: 16px;
+}
+
+/* CONTACTO: formulario y datos lado a lado con GRID */
+.contacto{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 64px;
+}
+
+.datos-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: start;
+    background-color: #F1C1B1;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.datos-contacto h3{
+    margin-top: 12px;
+}
+
+
+/* COMO FUNCIONA y PREGUNTAS (tarjetas con GRID) */
+.como-funciona h2, .preguntas-frecuentes h2{
+    margin-bottom: 24px;
+}
+
+.pasos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pasos article{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #FBF7F3;
+    border: 1px solid #E6D3C8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.numero{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #9C4A3C;
+}
+
+/* DESCUBRIR: barrios y proximas fechas */
+.barrios h2, .proximas h2{
+    margin-bottom: 8px;
+}
+
+.barrios .botones{
+    justify-content: flex-start;
+}
+
+.lista-fechas{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 760px;
+}
+
+.lista-fechas li{
+    padding: 16px 0;
+    border-bottom: 1px solid #E6D3C8;
+}
+
+/* LISTAS: segunda lista */
+.titulo-yafui{
+    margin-top: 48px;
+}
+
+
+/* ===== PORTFOLIO ===== */
+
+/* titulo y materias con FLEX */
+.portfolio-titulo .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+}
+
+.portfolio-datos h2{
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.portfolio-datos p{
+    font-size: 1.25rem;
+}
+
+.materias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.proyectos{
+    padding-top: 0;
+}
+
+.proyectos h2{
+    margin-bottom: 24px;
+}
+
+/* galeria con GRID TEMPLATE AREAS */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "pic1 pic1 pic2"
+        "pic3 pic4 pic4"
+        "pic5 pic6 pic7";
+    gap: 24px;
+}
+
+.galeria div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.galeria img{
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.pic1{ grid-area: pic1; }
+.pic2{ grid-area: pic2; }
+.pic3{ grid-area: pic3; }
+.pic4{ grid-area: pic4; }
+.pic5{ grid-area: pic5; }
+.pic6{ grid-area: pic6; }
+.pic7{ grid-area: pic7; }
+
+
+/* ===== MEDIA QUERIES: tablet y celular ===== */
+
+/* TABLET */
+@media(max-width:1024px){
+    .grilla-eventos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grilla-beneficios{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grilla-guardados{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "pic1 pic1"
+            "pic2 pic3"
+            "pic4 pic4"
+            "pic5 pic6"
+            "pic7 pic7";
+    }
+}
+
+/* CELULAR */
+@media(max-width:768px){
+    h2{ font-size: 2.75rem; }
+
+    header .contenedor, footer .contenedor{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav, footer nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .inicio .contenedor{
+        flex-direction: column;
+    }
+
+    .inicio-texto h2, .titulo-pagina h2{
+        font-size: 3.25rem;
+    }
+
+    .tarjetas{
+        flex-direction: column;
+    }
+
+    .grilla-eventos, .grilla-beneficios, .grilla-guardados{
+        grid-template-columns: 1fr;
+    }
+
+    /* en el celu el menu de listas va arriba */
+    .listas{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "menu"
+            "contenido";
+    }
+
+    .contacto{
+        grid-template-columns: 1fr;
+    }
+
+    .pasos{
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-titulo .contenedor{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio-datos h2{
+        font-size: 3.25rem;
+    }
+
+    /* en el celu la galeria va en una columna */
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "pic1"
+            "pic2"
+            "pic3"
+            "pic4"
+            "pic5"
+            "pic6"
+            "pic7";
+    }
 }

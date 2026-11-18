@@ -19,12 +19,13 @@
     <!-- COMIENZO DE HEADER -->
     <header>
         <div class="contenedor">
-            <h1>Atelier You</h1>
+            <h1><a href="./index.html">Atelier You</a></h1>
             <nav>
-                <a href="./index.html">Inicio</a>
+                <a href="./index.html" class="activo">Inicio</a>
                 <a href="./pages/descubrir.html">Descubrir</a>
                 <a href="./pages/listas.html">Listas</a>
-                <a href="#club">Club</a>
+                <a href="./pages/club.html">Club</a>
+                <a href="./pages/contacto.html">Contacto</a>
             </nav>
         </div>
     </header>
@@ -37,7 +38,7 @@
                     <h2>La moda porteña de esta semana</h2>
                     <p>Desfiles, ferias, showrooms y aperturas cerca tuyo,
                         armado según lo que te gusta.</p>
-                    <button>Ver la agenda</button>
+                    <a href="./pages/descubrir.html" class="boton">Ver la agenda</a>
                 </div>
 
                 <!-- Imagen principal -->
@@ -100,6 +101,32 @@
             </div>
         </section>
 
+        <!-- Como funciona -->
+        <section class="como-funciona">
+            <div class="contenedor">
+                <h2>¿Cómo funciona?</h2>
+                <div class="pasos">
+                    <article>
+                        <span class="numero">1</span>
+                        <h3>Elegí lo que te gusta</h3>
+                        <p>Desfiles, ferias, showrooms, pop-ups o muestras: filtrá por tipo de evento.</p>
+                    </article>
+
+                    <article>
+                        <span class="numero">2</span>
+                        <h3>Encontrá eventos cerca</h3>
+                        <p>Mirá la agenda de la semana con fecha, horario, barrio y precio.</p>
+                    </article>
+
+                    <article>
+                        <span class="numero">3</span>
+                        <h3>Guardalos y contá cómo te fue</h3>
+                        <p>Armá tus listas y dejá tu reseña para ayudar a la comunidad.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Reseñas -->
         <section class="resenas">
             <div class="contenedor">
@@ -127,12 +154,12 @@
         </section>
 
         <!-- Club -->
-        <section class="club" id="club">
+        <section class="club">
             <div class="contenedor">
                 <h2>Sumate al Club Atelier You</h2>
                 <p>Accedé antes a los eventos, recibí la agenda semanal en tu mail
                     y conocé gente que comparte tu pasión por la moda.</p>
-                <button>Quiero unirme</button>
+                <a href="./pages/club.html" class="boton boton-rosa">Quiero unirme</a>
             </div>
         </section>
     </main>
@@ -145,11 +172,12 @@
                 <a href="./index.html">Inicio</a>
                 <a href="./pages/descubrir.html">Descubrir</a>
                 <a href="./pages/listas.html">Listas</a>
-                <a href="#club">Club</a>
-                <a href="">Contacto</a>
+                <a href="./pages/club.html">Club</a>
+                <a href="./pages/contacto.html">Contacto</a>
             </nav>
 
             <div class="redes">
+                <a href="./pages/portfolio.html">Portfolio</a>
                 <a href="">Instagram</a>
                 <a href="">TikTok</a>
             </div>

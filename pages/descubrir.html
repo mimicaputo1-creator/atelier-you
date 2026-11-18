@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubrir | Atelier You</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+    <!-- TIPOGRAFIA TITULARES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+    <!-- TIPOGRAFIA TEXTO -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- COMIENZO DE HEADER -->
+    <header>
+        <div class="contenedor">
+            <h1><a href="../index.html">Atelier You</a></h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="./descubrir.html" class="activo">Descubrir</a>
+                <a href="./listas.html">Listas</a>
+                <a href="./club.html">Club</a>
+                <a href="./contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Titulo de la pagina -->
+        <section class="titulo-pagina">
+            <div class="contenedor">
+                <h2>Descubrí la agenda</h2>
+                <p>Todos los eventos de moda de la semana en Buenos Aires, en un solo lugar.</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="buscador">
+            <div class="contenedor">
+                <h2>¿Qué estás buscando?</h2>
+                <div class="botones">
+                    <button>Todos</button>
+                    <button>Desfiles</button>
+                    <button>Ferias</button>
+                    <button>Showrooms</button>
+                    <button>Pop-ups</button>
+                    <button>Muestras</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grilla de eventos -->
+        <section class="agenda">
+            <div class="contenedor">
+                <h2 class="titulo-agenda">Esta semana</h2>
+                <div class="grilla-eventos">
+                    <article class="ficha">
+                        <img src="../img/evento-desfile.jpg" alt="Desfile de diseño de autor">
+                        <span class="etiqueta">Desfile</span>
+                        <h3>Desfile de diseño de autor</h3>
+                        <p>Sábado 18:00 · Palermo</p>
+                        <p class="precio">Entrada con inscripción</p>
+                        <button>Guardar en mis listas</button>
+                    </article>
+
+                    <article class="ficha">
+                        <img src="../img/evento-feria.jpg" alt="Puestos de una feria de diseño">
+                        <span class="etiqueta">Feria</span>
+                        <h3>Feria de diseño independiente</h3>
+                        <p>Domingo 12:00 · San Telmo</p>
+                        <p class="precio">Entrada libre</p>
+                        <button>Guardar en mis listas</button>
+                    </article>
+
+                    <article class="ficha">
+                        <img src="../img/evento-showroom.jpg" alt="Percheros con ropa en un showroom">
+                        <span class="etiqueta">Showroom</span>
+                        <h3>Showroom de nueva temporada</h3>
+                        <p>Jueves 16:00 · Recoleta</p>
+                        <p class="precio">Con reserva previa</p>
+                        <button>Guardar en mis listas</button>
+                    </article>
+
+                    <article class="ficha">
+                        <img src="../img/evento-popup.jpg" alt="Joyas y accesorios en una tienda pop-up">
+                        <span class="etiqueta">Pop-up</span>
+                        <h3>Pop-up de joyería vintage</h3>
+                        <p>Viernes 15:00 · Villa Crespo</p>
+                        <p class="precio">Entrada libre</p>
+                        <button>Guardar en mis listas</button>
+                    </article>
+
+                    <article class="ficha">
+                        <img src="../img/portada.jpg" alt="Modelo caminando en una pasarela">
+                        <span class="etiqueta">Desfile</span>
+                        <h3>Noche de diseñadores emergentes</h3>
+                        <p>Sábado 21:00 · Barracas</p>
+                        <p class="precio">$5.000</p>
+                        <button>Guardar en mis listas</button>
+                    </article>
+
+                    <!-- Tarjeta para organizadores -->
+                    <article class="ficha ficha-sumar">
+                        <h3>¿Organizás un evento?</h3>
+                        <p>Sumalo a la agenda de Atelier You y llegá a gente que ama la moda.</p>
+                        <a href="./contacto.html" class="boton">Escribinos</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explorar por barrio -->
+        <section class="barrios">
+            <div class="contenedor">
+                <h2>Explorá por barrio</h2>
+                <div class="botones">
+                    <button>Palermo</button>
+                    <button>Recoleta</button>
+                    <button>San Telmo</button>
+                    <button>Villa Crespo</button>
+                    <button>Barracas</button>
+                    <button>Chacarita</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proximas fechas -->
+        <section class="proximas">
+            <div class="contenedor">
+                <h2>Próximas fechas</h2>
+                <ul class="lista-fechas">
+                    <li><strong>22 de noviembre</strong> · Feria de diseño de autor · San Telmo</li>
+                    <li><strong>29 de noviembre</strong> · Showroom de temporada de verano · Recoleta</li>
+                    <li><strong>6 de diciembre</strong> · Desfile de egresados de diseño · Palermo</li>
+                    <li><strong>13 de diciembre</strong> · Feria navideña de diseño independiente · Chacarita</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <h2>Atelier You</h2>
+
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="./descubrir.html">Descubrir</a>
+                <a href="./listas.html">Listas</a>
+                <a href="./club.html">Club</a>
+                <a href="./contacto.html">Contacto</a>
+            </nav>
+
+            <div class="redes">
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="">Instagram</a>
+                <a href="">TikTok</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
